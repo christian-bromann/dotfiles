@@ -1,18 +1,13 @@
 #!/usr/bin/env bash
 
-if (( $USER == "gitpod" )); then
-    sudo apt-get -y install rsync
-fi
-
 function doIt() {
-	echo "Copy over files..."
-	rsync --exclude ".git/" \
-		--exclude ".DS_Store" \
-		--exclude ".osx" \
-		--exclude "bootstrap.sh" \
-		--exclude "README.md" \
-		--exclude "LICENSE" \
-		-avh --no-perms . ~;
+	echo "Linking files..."
+	ln -s ./.gitconfig ..
+    ln -s ./.p10k-8color.zsh ..
+    ln -s ./.p10k.zsh ..
+    ln -s ./.tmux.conf ..
+    ln -s ./.zshenv ..
+    ln -s ./.zshrc ..
 	echo "Switching Login Shell..."
 	sudo chsh -s $(which zsh)
     echo "Loading Zsh..."
