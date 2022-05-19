@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-cd "$HOME";
-
-git pull origin main;
-
 function doIt() {
+	echo "Copy over files..."
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
@@ -12,7 +9,10 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE" \
 		-avh --no-perms . ~;
-	source ~/.zshrc;
+	echo "Loading Zsh"
+	chsh -s $(which zsh)
+    zsh
+	echo "Done!"
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
@@ -25,3 +25,7 @@ else
 	fi;
 fi;
 unset doIt;
+docker run -e TERM -e COLORTERM -w /root -it --rm ubuntu sh -uec '
+  apt-get update
+  apt-get install -y zsh curl tmux git rsync grsync
+  sh
