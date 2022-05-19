@@ -3,7 +3,7 @@
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 
-if test ! -e /ide/bin/gp-code || test ! -v GITPOD_REPO_ROOT; then {
+if test ! -v GITPOD_REPO_ROOT; then {
     printf 'error: This script is meant to be run on Gitpod, quiting...\n' && exit 1;
 } fi
 
