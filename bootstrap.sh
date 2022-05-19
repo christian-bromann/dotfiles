@@ -15,17 +15,5 @@ function doIt() {
 	echo "Done!"
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
-	doIt;
-else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
-	echo "";
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		doIt;
-	fi;
-fi;
+doIt;
 unset doIt;
-docker run -e TERM -e COLORTERM -w /root -it --rm ubuntu sh -uec '
-  apt-get update
-  apt-get install -y zsh curl tmux git rsync grsync
-  sh
