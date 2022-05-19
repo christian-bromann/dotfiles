@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if (( $USER == "gitpod" )); then
-    sudo apt-get install rsync
+    sudo apt-get -y install rsync
 fi
 
 function doIt() {
