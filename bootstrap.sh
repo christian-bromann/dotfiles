@@ -5,12 +5,12 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 
 function doIt() {
 	echo "Linking files..."
-	sudo cp "$SCRIPTPATH/.gitconfig" ..
-    sudo cp "$SCRIPTPATH/.p10k-8color.zsh" ..
-    sudo cp "$SCRIPTPATH/.p10k.zsh" ..
-    sudo cp "$SCRIPTPATH/.tmux.conf" ..
-    sudo cp "$SCRIPTPATH/.zshenv" ..
-    sudo cp "$SCRIPTPATH/.zshrc" ..
+	sudo cp "$SCRIPTPATH/.gitconfig" "$HOME"
+    sudo cp "$SCRIPTPATH/.p10k-8color.zsh" "$HOME"
+    sudo cp "$SCRIPTPATH/.p10k.zsh" "$HOME"
+    sudo cp "$SCRIPTPATH/.tmux.conf" "$HOME"
+    sudo cp "$SCRIPTPATH/.zshenv" "$HOME"
+    sudo cp "$SCRIPTPATH/.zshrc" "$HOME"
 	echo "Switching Login Shell..."
 	sudo chsh -s $(which zsh)
     echo "Loading Zsh..."
