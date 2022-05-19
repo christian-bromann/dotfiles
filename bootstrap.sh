@@ -11,6 +11,14 @@ function doIt() {
     sudo cp "$SCRIPTPATH/.tmux.conf" "$HOME"
     sudo cp "$SCRIPTPATH/.zshenv" "$HOME"
     sudo cp "$SCRIPTPATH/.zshrc" "$HOME"
+    echo "Install Fonts"
+    sudo mkdir -p ~/.local/share/fonts
+    sudo wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Bold/complete/Fira%20Code%20Bold%20Nerd%20Font%20Complete%20Mono.ttf -P ~/.local/share/fonts
+    sudo wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Light/complete/Fira%20Code%20Light%20Nerd%20Font%20Complete%20Mono.ttf -P ~/.local/share/fonts
+    sudo wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Medium/complete/Fira%20Code%20Medium%20Nerd%20Font%20Complete%20Mono.ttf -P ~/.local/share/fonts
+    sudo wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Mono.ttf -P ~/.local/share/fonts
+    sudo wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Retina/complete/Fira%20Code%20Retina%20Nerd%20Font%20Complete%20Mono.ttf -P ~/.local/share/fonts
+    sudo wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/SemiBold/complete/Fira%20Code%20SemiBold%20Nerd%20Font%20Complete%20Mono.ttf -P ~/.local/share/fonts
 	echo "Switching Login Shell..."
 	sudo chsh -s $(which zsh)
     echo "Loading Zsh..."
