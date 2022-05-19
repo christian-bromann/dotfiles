@@ -76,7 +76,7 @@ z4h load   ohmyzsh/ohmyzsh/plugins/git
 z4h load   ohmyzsh/ohmyzsh/plugins/npm
 z4h load   ohmyzsh/ohmyzsh/plugins/nvm
 z4h load   ohmyzsh/ohmyzsh/plugins/yarn
-# z4h load   ohmyzsh/ohmyzsh/plugins/tmux
+z4h load   ohmyzsh/ohmyzsh/plugins/tmux
 z4h load   ohmyzsh/ohmyzsh/plugins/docker
 
 # Define key bindings.
