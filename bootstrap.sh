@@ -9,7 +9,7 @@ if test ! -v GITPOD_REPO_ROOT; then {
 
 function doIt() {
 	echo "Linking files..."
-	sudo cp "$SCRIPTPATH/.gitconfig" "$HOME"
+	# sudo cp "$SCRIPTPATH/.gitconfig" "$HOME"
     sudo cp "$SCRIPTPATH/.p10k-8color.zsh" "$HOME"
     sudo cp "$SCRIPTPATH/.p10k.zsh" "$HOME"
     sudo cp "$SCRIPTPATH/.tmux.conf" "$HOME"
