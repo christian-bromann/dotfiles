@@ -2,8 +2,6 @@
 [user]
 	name = Christian Bromann
 	email = git@bromann.dev
-[commit]
-	gpgsign = true
 [pull]
 	rebase = true
 	ff = only
