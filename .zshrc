@@ -98,11 +98,6 @@ compdef _directories md
 # Define named directories: ~w <=> Windows home directory on WSL.
 [[ -z $z4h_win_home ]] || hash -d w=$z4h_win_home
 
-# Define aliases.
-alias tree='tree -a -I .git'
-alias cds="cd $HOME/Sites/Stateful/projects"
-alias cdw="$HOME/Sites/WebdriverIO/"
-
 # Add flags to existing aliases.
 alias ls="${aliases[ls]:-ls} -A"
 
