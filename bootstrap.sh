@@ -9,12 +9,12 @@ if test ! -v GITPOD_REPO_ROOT; then {
 
 function doIt() {
 	echo "Linking files..."
-	sudo cp "$SCRIPTPATH/.gitconfig" "$HOME"
+	sudo cp "$SCRIPTPATH/.gitconfig" >> "$HOME/.gitconfig"
     sudo cp "$SCRIPTPATH/.p10k-8color.zsh" "$HOME"
     sudo cp "$SCRIPTPATH/.p10k.zsh" "$HOME"
     sudo cp "$SCRIPTPATH/.tmux.conf" "$HOME"
     sudo cp "$SCRIPTPATH/.zshenv" "$HOME"
-    sudo cp "$SCRIPTPATH/.zshrc" "$HOME"
+    sudo cp "$SCRIPTPATH/.zshrc" >> "$HOME/.zshrc"
     echo "Install Fonts"
     sudo mkdir -p ~/.local/share/fonts
     sudo wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Bold/complete/Fira%20Code%20Bold%20Nerd%20Font%20Complete%20Mono.ttf -P ~/.local/share/fonts
