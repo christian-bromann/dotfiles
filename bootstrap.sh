@@ -2,12 +2,12 @@
 
 function doIt() {
 	echo "Linking files..."
-	ln -s ./.gitconfig ..
-    ln -s ./.p10k-8color.zsh ..
-    ln -s ./.p10k.zsh ..
-    ln -s ./.tmux.conf ..
-    ln -s ./.zshenv ..
-    ln -s ./.zshrc ..
+	cp ./.gitconfig ..
+    cp ./.p10k-8color.zsh ..
+    cp ./.p10k.zsh ..
+    cp ./.tmux.conf ..
+    cp ./.zshenv ..
+    cp ./.zshrc ..
 	echo "Switching Login Shell..."
 	sudo chsh -s $(which zsh)
     echo "Loading Zsh..."
