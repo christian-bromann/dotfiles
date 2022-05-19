@@ -14,7 +14,7 @@ function doIt() {
 	echo "Switching Login Shell..."
 	sudo chsh -s $(which zsh)
     echo "Loading Zsh..."
-	zsh
+	exec zsh
 	echo "Done!"
 }
 
