@@ -9,3 +9,5 @@
 	protocol = ssh
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true
